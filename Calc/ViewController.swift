@@ -8,6 +8,24 @@
 
 import UIKit
 
+//ボタンのカスタムクラス
+@IBDesignable class BorderedButton: UIButton{
+    
+    //枠線の色設定
+    @IBInspectable var borderColor: UIColor? {
+        get {return UIColor(cgColor: layer.borderColor!)}
+        set {layer.borderColor = newValue?.cgColor ?? nil}
+    }
+    
+    //枠線の幅設定
+    @IBInspectable public var borderWidth: CGFloat = 1.0 {
+        didSet{
+            self.layer.borderWidth = self.borderWidth
+        }
+    }
+}
+
+//電卓機能部
 class ViewController: UIViewController {
     
     var firstNumber = ""
@@ -80,6 +98,23 @@ class ViewController: UIViewController {
         resultLabel.text = ""
     }
     
+    @IBAction func clearAllPushdown(_ sender: UIButton) {
+        firstNumber=""
+        secondNumber=""
+        kigou=""
+        resultLabel.text=""
+    }
+    
+    @IBAction func clearEntryPushdown(_ sender: UIButton) {
+        if resultLabel.text == "" {
+            resultLabel.text = ""
+        }else{
+        let fixBeforNumber : String = resultLabel.text!
+        let nokosuIndex : Int = (resultLabel.text?.characters.count)!
+        let fixIndex : Int = nokosuIndex - 1
+        resultLabel.text = fixBeforNumber.substring(to: (fixBeforNumber.index((fixBeforNumber.startIndex), offsetBy: fixIndex)))
+        }
+        }
     
     @IBAction func equalButtonPushdown(_ sender: UIButton) {
         secondNumber = resultLabel.text!
@@ -87,7 +122,7 @@ class ViewController: UIViewController {
         var y:Double = NSString(string: secondNumber).doubleValue
         var z:Double = 0
         
-//        if kigou == "+"  {
+////        if kigou == "+"  {
 //        z = x + y
 //            var answer: String = NSString(format: "%.1f", z) as String
 //            resultLabel.text = answer
@@ -100,12 +135,15 @@ class ViewController: UIViewController {
 //            var answer: String = NSString(format: "%.1f", z) as String
 //            resultLabel.text = answer
 //        }else {
+////            if y == 0 {
+////                resultLabel.text = ""
+////            }else {
 //            z = x / y
 //            var answer: String = NSString(format: "%.1f", z) as String
 //            resultLabel.text = answer
-//        
+//            }
 //        }
-//    }
+
 
         switch kigou {
         case "+":
@@ -120,9 +158,9 @@ class ViewController: UIViewController {
         case "÷":
             z = x / y
         
-        default: break
+        default:break
         }
-        
+
         var answer: String = NSString(format: "%.1f", z) as String
         resultLabel.text = answer
     }
@@ -137,3 +175,21 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

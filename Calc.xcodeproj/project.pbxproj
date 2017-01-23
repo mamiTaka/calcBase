@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F870E44C1E33A45A0073853B /* DSEG7Modern-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F870E44B1E33A45A0073853B /* DSEG7Modern-Regular.ttf */; };
 		F8A9C9C51E1114F0009F013D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A9C9C41E1114F0009F013D /* AppDelegate.swift */; };
 		F8A9C9C71E1114F0009F013D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A9C9C61E1114F0009F013D /* ViewController.swift */; };
 		F8A9C9CA1E1114F0009F013D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8A9C9C81E1114F0009F013D /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F870E44B1E33A45A0073853B /* DSEG7Modern-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DSEG7Modern-Regular.ttf"; sourceTree = "<group>"; };
 		F8A9C9C11E1114F0009F013D /* Calc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8A9C9C41E1114F0009F013D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F8A9C9C61E1114F0009F013D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 		F8A9C9C31E1114F0009F013D /* Calc */ = {
 			isa = PBXGroup;
 			children = (
+				F870E44B1E33A45A0073853B /* DSEG7Modern-Regular.ttf */,
 				F8A9C9C41E1114F0009F013D /* AppDelegate.swift */,
 				F8A9C9C61E1114F0009F013D /* ViewController.swift */,
 				F8A9C9C81E1114F0009F013D /* Main.storyboard */,
@@ -193,6 +196,7 @@
 				TargetAttributes = {
 					F8A9C9C01E1114F0009F013D = {
 						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = TLK5TGXACA;
 						ProvisioningStyle = Automatic;
 					};
 					F8A9C9D41E1114F0009F013D = {
@@ -233,6 +237,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8A9C9CF1E1114F0009F013D /* LaunchScreen.storyboard in Resources */,
+				F870E44C1E33A45A0073853B /* DSEG7Modern-Regular.ttf in Resources */,
 				F8A9C9CC1E1114F0009F013D /* Assets.xcassets in Resources */,
 				F8A9C9CA1E1114F0009F013D /* Main.storyboard in Resources */,
 			);
@@ -410,6 +415,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = TLK5TGXACA;
 				INFOPLIST_FILE = Calc/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.co.docomo.Calc;
@@ -422,6 +428,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = TLK5TGXACA;
 				INFOPLIST_FILE = Calc/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.co.docomo.Calc;
@@ -503,6 +510,7 @@
 				F8A9C9EB1E1114F0009F013D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F8A9C9EC1E1114F0009F013D /* Build configuration list for PBXNativeTarget "CalcTests" */ = {
 			isa = XCConfigurationList;
@@ -511,6 +519,7 @@
 				F8A9C9EE1E1114F0009F013D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F8A9C9EF1E1114F0009F013D /* Build configuration list for PBXNativeTarget "CalcUITests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +528,7 @@
 				F8A9C9F11E1114F0009F013D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
